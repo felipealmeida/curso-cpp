@@ -78,5 +78,52 @@
   \usebox{\listingboxd}
 }
 
+\newsavebox{\listingboxe}
+\begin{lrbox}{\listingboxe}
+\lstinputlisting[mathescape=true,firstline=4,lastline=9]{cpp/divide_assert.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Programação por Contrato}
+
+  \usebox{\listingboxe}
+}
+
+\frame
+{
+  \frametitle{Programação por Contrato}
+
+  \usebox{\listingboxd}
+
+  \begin{itemize}
+  \item Se $lhs = 0$ então lança exceção runtime\_error
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Programação por Contrato}
+
+  \usebox{\listingboxe}
+
+  \begin{itemize}
+  \item Se $lhs = 0$ então \texttt{undefined behavior}
+  \end{itemize}
+}
+
+\frame
+{
+  \frametitle{Undefined Behavior}
+
+  \begin{itemize}
+  \item \alert<1>{Qualquer} comportamento é válido
+  \item<2-> Pode ser \texttt{implementation defined}
+    \begin{itemize}
+    \item<3-> Pode ter um comportamento
+    \end{itemize}
+  \end{itemize}
+}
+
 \end{document}
 
