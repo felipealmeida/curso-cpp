@@ -1,0 +1,49 @@
+%% -*- TeX-engine: xetex; mode: LaTeX; eval: (TeX-PDF-mode); coding: utf-8-unix; TeX-master: t; ispell-local-dictionary: "pt_BR"; -*-
+
+\documentclass[14pt]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[final]{listings}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{biblatex}
+\usepackage{tikz}
+
+\title{Curso de C++}
+\author{Felipe Magno de Almeida}
+\date{\today}
+
+\lstset{basicstyle=\small,language=C++,stringstyle=\ttfamily,showstringspaces=false,keywordstyle=\color{blue}}
+
+\begin{document}
+
+\frame
+{
+  \titlepage
+}
+
+\frame
+{
+  \tableofcontents
+}
+
+\section{Programação por Contrato}
+
+\newsavebox{\listingboxa}
+\begin{lrbox}{\listingboxa}
+\begin{lstlisting}[mathescape=true]
+exemplo de programacao defensiva
+\end{lstlisting}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Programação por Contrato}
+
+  \usebox{\listingboxa}
+}
+
+
+\end{document}
+
