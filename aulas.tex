@@ -32,9 +32,7 @@
 
 \newsavebox{\listingboxa}
 \begin{lrbox}{\listingboxa}
-\begin{lstlisting}[mathescape=true]
-exemplo de programacao defensiva
-\end{lstlisting}
+\lstinputlisting[mathescape=true,firstline=5,lastline=8]{cpp/divide.cpp}
 \end{lrbox}
 
 \frame
@@ -44,6 +42,41 @@ exemplo de programacao defensiva
   \usebox{\listingboxa}
 }
 
+\newsavebox{\listingboxb}
+\begin{lrbox}{\listingboxb}
+\lstinputlisting[mathescape=true,firstline=3,lastline=3]{cpp/divide.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Programação por Contrato}
+
+  \usebox{\listingboxb}
+}
+
+\newsavebox{\listingboxc}
+\begin{lrbox}{\listingboxc}
+\lstinputlisting[mathescape=true,firstline=2,lastline=3]{cpp/divide.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Programação por Contrato}
+
+  \usebox{\listingboxc}
+}
+
+\newsavebox{\listingboxd}
+\begin{lrbox}{\listingboxd}
+\lstinputlisting[mathescape=true,firstline=4,lastline=11]{cpp/divide_exception.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Programação por Contrato}
+
+  \usebox{\listingboxd}
+}
 
 \end{document}
 
