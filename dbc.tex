@@ -32,7 +32,7 @@
 
 \newsavebox{\listingboxa}
 \begin{lrbox}{\listingboxa}
-\lstinputlisting[mathescape=true,firstline=5,lastline=8]{cpp/divide.cpp}
+\lstinputlisting[mathescape=true,firstline=6,lastline=9]{cpp/divide.cpp}
 \end{lrbox}
 
 \frame
@@ -44,7 +44,7 @@
 
 \newsavebox{\listingboxb}
 \begin{lrbox}{\listingboxb}
-\lstinputlisting[mathescape=true,firstline=3,lastline=3]{cpp/divide.cpp}
+\lstinputlisting[mathescape=true,firstline=4,lastline=4]{cpp/divide.cpp}
 \end{lrbox}
 
 \frame
@@ -56,7 +56,7 @@
 
 \newsavebox{\listingboxc}
 \begin{lrbox}{\listingboxc}
-\lstinputlisting[mathescape=true,firstline=2,lastline=3]{cpp/divide.cpp}
+\lstinputlisting[mathescape=true,firstline=2,lastline=4]{cpp/divide.cpp}
 \end{lrbox}
 
 \frame
@@ -68,7 +68,7 @@
 
 \newsavebox{\listingboxd}
 \begin{lrbox}{\listingboxd}
-\lstinputlisting[mathescape=true,firstline=4,lastline=11]{cpp/divide_exception.cpp}
+\lstinputlisting[mathescape=true,firstline=4,lastline=12]{cpp/divide_exception.cpp}
 \end{lrbox}
 
 \frame
@@ -80,7 +80,7 @@
 
 \newsavebox{\listingboxe}
 \begin{lrbox}{\listingboxe}
-\lstinputlisting[mathescape=true,firstline=4,lastline=9]{cpp/divide_assert.cpp}
+\lstinputlisting[mathescape=true,firstline=4,lastline=10]{cpp/divide_assert.cpp}
 \end{lrbox}
 
 \frame
@@ -120,9 +120,89 @@
   \item \alert<1>{Qualquer} comportamento é válido
   \item<2-> Pode ser \texttt{implementation defined}
     \begin{itemize}
-    \item<3-> Pode ter um comportamento
+    \item<3-> Pode ter um comportamento reproduzível
     \end{itemize}
+  \item<4-> Pode ter um comportamento aleatório
+  \item<5-> Geralmente gera falhas de segurança
   \end{itemize}
+}
+
+\newsavebox{\listingboxf}
+\begin{lrbox}{\listingboxf}
+\lstinputlisting[mathescape=true,firstline=9,lastline=10]{cpp/divide_user.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Usando contrato}
+
+  \usebox{\listingboxf}
+}
+
+\newsavebox{\listingboxg}
+\begin{lrbox}{\listingboxg}
+\lstinputlisting[mathescape=true,firstline=7,lastline=10]{cpp/divide_user.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Usando contrato}
+
+  \usebox{\listingboxg}
+}
+
+\newsavebox{\listingboxh}
+\begin{lrbox}{\listingboxh}
+\lstinputlisting[mathescape=true,firstline=15,lastline=18]{cpp/divide_user.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Usando contrato}
+
+  \usebox{\listingboxh}
+}
+
+\newsavebox{\listingboxi}
+\begin{lrbox}{\listingboxi}
+\lstinputlisting[mathescape=true,firstline=12,lastline=18]{cpp/divide_user.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Usando contrato}
+
+  \usebox{\listingboxi}
+}
+
+\newsavebox{\listingboxj}
+\begin{lrbox}{\listingboxj}
+\lstinputlisting[mathescape=true,firstline=12,lastline=19]{cpp/divide_user.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Usando contrato}
+
+  \usebox{\listingboxj}
+}
+
+\newsavebox{\listingboxk}
+\begin{lrbox}{\listingboxk}
+\lstinputlisting[mathescape=true,firstline=8,lastline=8]{cpp/divide_user.cpp}
+\end{lrbox}
+
+\newsavebox{\listingboxl}
+\begin{lrbox}{\listingboxl}
+\lstinputlisting[mathescape=true,firstline=21,lastline=21]{cpp/divide_user.cpp}
+\end{lrbox}
+
+\frame
+{
+  \frametitle{Usando contrato}
+
+  \usebox{\listingboxk}
+  \usebox{\listingboxl}
 }
 
 \end{document}

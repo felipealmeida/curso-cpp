@@ -1,7 +1,8 @@
 
 #include <stdexcept>
 
-// Pre: $rhs \neq 0 \wedge R = \frac{lhs}{rhs}$
+// Pre: $rhs \neq 0$
+// Post: $R = \frac{lhs}{rhs}$
 int divide(int lhs, int rhs)
 {
   if(rhs == 0)

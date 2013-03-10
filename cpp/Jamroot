@@ -5,4 +5,5 @@ alias test
  : [ compile divide.cpp ]
    [ compile divide_assert.cpp ]
    [ compile divide_exception.cpp ]
+   [ compile divide_user.cpp ]
  ;
