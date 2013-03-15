@@ -7,6 +7,7 @@
 \usepackage{fontspec}
 \usepackage{hyperref}
 \usepackage{color}
+\usepackage{csquotes}
 \usepackage{biblatex}
 \usepackage{tikz}
 
@@ -182,6 +183,64 @@
   \frametitle{Usando contrato}
 
   \usebox{\listingboxi}
+}
+
+\frame
+{
+  \frametitle{Usando contrato}
+
+  \begin{figure}
+    \centering
+    
+    \begin{tikzpicture}[node distance=1.5cm]
+
+      \path (-4, 0);
+      \path (5, 0);
+      
+      \node<-1> at (-3, 0) [draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E0) {2};
+      \node<2-> at (-3, 0) [fill=green!20,draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E0) {1};
+
+      \node<-2> at (-2, 0) [draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E1) {4};
+      \node<3-> at (-2, 0) [fill=green!20,draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E1) {2};
+
+      \node<-3> at (-1, 0) [draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E2) {8};
+      \node<4-> at (-1, 0) [fill=green!20,draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E2) {4};
+
+      \node<-4> at ( 0, 0) [draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E3) {10};
+      \node<5-> at ( 0, 0) [fill=green!20,draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E3) {5};
+
+      \node<-5> at ( 1, 0) [draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E4) {52};
+      \node<6-> at ( 1, 0) [fill=green!20,draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E4) {26};
+
+      \node<-6> at ( 2, 0) [draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E5) {108};
+      \node<7-> at ( 2, 0) [fill=green!20,draw,rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (E5) {54};
+
+      \node at ( 3, 0) [rectangle,inner sep=0pt,minimum width=1cm,minimum height=1cm] (Size) {};
+
+      \node<-6> [above of=Size] (SizeDesc) {$size$};
+      \node<7> [above of=Size] (SizeDesc) {$i = size$};
+      \draw [->] (SizeDesc) -- (Size);
+
+      \node<1> [above of=E0] (i) {$i$};
+      \draw<1> [->] (i) -- (E0);
+
+      \node<2> [above of=E1] (i) {$i$};
+      \draw<2> [->] (i) -- (E1);
+
+      \node<3> [above of=E2] (i) {$i$};
+      \draw<3> [->] (i) -- (E2);
+
+      \node<4> [above of=E3] (i) {$i$};
+      \draw<4> [->] (i) -- (E3);
+
+      \node<5> [above of=E4] (i) {$i$};
+      \draw<5> [->] (i) -- (E4);
+
+      \node<6> [above of=E5] (i) {$i$};
+      \draw<6> [->] (i) -- (E5);
+
+    \end{tikzpicture}
+  \end{figure}
 }
 
 \newsavebox{\listingboxj}
