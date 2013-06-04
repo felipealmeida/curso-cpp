@@ -28,5 +28,55 @@
   
 \end{resumo}
 
+\section{Programação imperativa}
+
+A programação imperativa consiste da execução sequencial de sentenças
+que fazem modificações no estado da aplicação. Essas sentenças são
+como sentenças no modo imperativo do português, que expressa ordem,
+comando. Esse é um paradigma intrinsicamente diferente da programação
+funcional, por exemplo, que tem progressos através de avaliações
+sucessivas de expressões.
+
+\section{Programação por Contrato}
+
+
+
+\section{Estado}
+
+Para falar sobre sentenças e modificações de estados, precisamos definir 
+
+É possível pensar, formalmente, em estado de um programa de computador
+como um conjunto de pares ordenados. Aonde o primeiro elemento do par
+identifica a variável de nosso programa, e.g. por um identificador, e
+o segundo elemento do par o valor dessa variável naquele estado.
+
+Por exemplo o programa abaixo chamado com $x=5$:
+
+\begin{lstlisting}[mathescape=true]
+int incr(int $x$)
+{
+  int $y$ = 10;
+  // $S = \left\{{ \left< x,5 \right>, \left< y,10 \right> }\right\}$
+  ++$x$;
+  // $S = \left\{{ \left< x,6 \right>, \left< y,10 \right> }\right\}$
+  return $x$;
+}
+\end{lstlisting}
+
+Como um conjunto não possui relação de ordem entre seus elementos,
+$\left\{{ \left< x,6 \right>, \left< y,10 \right> }\right\} = \left\{{
+    \left< y,10 \right>, \left< x,6 \right> }\right\}$. É por isso que
+a simples representação do estado como conjunto de valores e fazer a
+relação entre variável e valor através de índice não seria suficiente,
+como por exemplo $S = \left\{{5,10}\right\}$, já que
+$\left\{{5,10}\right\} = \left\{{10,5}\right\}$. Também o uso de pares
+ordenados demonstra uma relação binária entre o conjunto de variáveis
+e o conjunto de valores que representam aquelas variáveis em
+determinado momento.
+
+O conceito de estado como um conjunto formaliza uma série de operações
+essenciais como a escrita de predicados e etc. Porém, para facilitar,
+este artigo usará a sintaxe $x = 5$ como equivalente a
+$\left<x,5\right> \in S$, aonde $S$ é o conjunto do estado corrente.
 
 \end{document}
