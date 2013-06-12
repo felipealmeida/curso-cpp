@@ -9,6 +9,8 @@
 \usepackage{fontspec}
 \usepackage{listings}
 
+\lstset{basicstyle=\small,language=C++,stringstyle=\ttfamily,showstringspaces=false,keywordstyle=\color{blue},float=h!,frame=lines,mathescape=true}
+
 %\usepackage[brazil]{babel}   
 %\usepackage[latin1]{inputenc}  
 
@@ -39,11 +41,21 @@ sucessivas de expressões.
 
 \section{Programação por Contrato}
 
+A programação por contrato prevê uma abordagem formal para
+especificação de interfaces de implementação. Essa formalização ocorre
+pela definição de precondições, pós-condições e invariantes. E essa
+especificação deve ser seguida à risca, assim como no caso de um
+contrato de negócios.
 
+O código~\ref{lst:example1} mostra um 
+
+\lstinputlisting[label=lst:example1,caption={Exemplo 1},firstline=6,lastline=9]{../cpp/divide.cpp}
 
 \section{Estado}
 
-Para falar sobre sentenças e modificações de estados, precisamos definir 
+Para falar sobre sentenças e modificações de estados em um contexto
+menos informal, precisamos definir o que é estado de tal modo que este
+seja útil em um sistema formal.
 
 É possível pensar, formalmente, em estado de um programa de computador
 como um conjunto de pares ordenados. Aonde o primeiro elemento do par
